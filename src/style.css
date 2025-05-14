@@ -82,6 +82,81 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+#characterList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.pokemon-card {
+  background-color: #333; 
+  border-radius: 10px;
+  padding: 1rem;
+  width: 200px;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.pokemon-card img {
+  width: 100px;
+  height: 100px;
+}
+
+.pokemon-card:hover {
+  background-color: white;
+  color: black;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.pokemon-card h3,
+.pokemon-card p {
+  margin: 0.5rem 0;
+  word-wrap: break-word;
+}
+
+
+
+.light-theme {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.light-theme .pokemon-card {
+  background-color: #f2f2f2;
+  color: #000;
+}
+
+
+.dark-theme {
+  background-color: #242424;
+  color: #ffffff;
+}
+
+.dark-theme .pokemon-card {
+  background-color: #333;
+  color: #fff;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.theme-selector {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

@@ -10,9 +10,19 @@
   </head>
   
   <div id="app">
-    <h1>Pokemon APIA</h1>
-    <input type="text" id="searchInput" placeholder="Zoek een Pokémon op naam..." />
+    <h1>Pokemon API</h1>
 
+    <div class="top-bar">
+      <input type="text" id="searchInput" placeholder="Zoek een Pokémon op naam..." />
+      <div class="theme-selector">
+        <label for="themeSelectie"></label>
+        <select id="themeSelectie">
+          <option value="dark">Donker achtergrond</option>
+          <option value="light">Licht achtergrond</option>
+        </select>
+      </div>
+    </div>
+    
     <div id="characterList"></div>
   </div>
   <script type="module" src="/src/main.js"></script>

@@ -69,7 +69,7 @@ fetch('https://pokeapi.co/api/v2/pokemon?limit=20')
           characterList.appendChild(card);
         })
         .catch(err => {
-          console.error('Fout bij ophalen Pokémon details:', err);
+          console.error('Fout bij ophalen: ', err);
         });
     });
     const searchInput = document.getElementById('searchInput');
@@ -88,3 +88,27 @@ searchInput.addEventListener('input', function () {
   .catch(error => {
     console.error('Fout bij het ophalen van de lijst Pokémon:', error);
   });
+
+
+  // ChatGPT
+  const themeSelect = document.getElementById('themeSelectie');
+
+  themeSelect.addEventListener('change', () => {
+    const selectedTheme = themeSelect.value;
+    const root = document.documentElement;
+  
+    // Verwijder bestaande thema-klassen
+    root.classList.remove('light-theme', 'dark-theme');
+  
+    // Voeg nieuwe toe
+    if (selectedTheme === 'light') {
+      root.classList.add('light-theme');
+    } else {
+      root.classList.add('dark-theme');
+    }
+  });
+  
+  // Zet standaard thema
+  document.documentElement.classList.add('dark-theme');
+  themeSelect.value = 'dark';
+  
