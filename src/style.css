@@ -156,6 +156,31 @@ button:focus-visible {
   align-items: flex-end;
 }
 
+#zoekbalk-container{
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  width: 100%;
+  align-items: center;
+  
+}
+
+#search {
+  width: 60%;
+  max-width: 500px;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  background-color: #222;
+  color: white;
+}
+
+
+#search::placeholder {
+  color: #aaa;
+}
 
 @media (prefers-color-scheme: light) {
   :root {

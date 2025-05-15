@@ -59,7 +59,11 @@ fetch('https://pokeapi.co/api/v2/pokemon?limit=20')
           const typeNames = details.types.map(t => t.type.name).join(', ');
           types.textContent = `Type(s): ${typeNames}`;
 
-          // Alles toevoegen aan de kaart
+          const experience = document.createElement('p');
+          experience.textContent = `Base XP: ${details.base_experience}`;
+          
+          
+          card.appendChild(experience);
           card.appendChild(name);
           card.appendChild(image);
           card.appendChild(weight);
@@ -72,7 +76,7 @@ fetch('https://pokeapi.co/api/v2/pokemon?limit=20')
           console.error('Fout bij ophalen: ', err);
         });
     });
-    const searchInput = document.getElementById('searchInput');
+    const searchInput = document.getElementById('search');
 
 searchInput.addEventListener('input', function () {
   const query = this.value.toLowerCase();
