@@ -116,3 +116,27 @@ searchInput.addEventListener('input', function () {
   document.documentElement.classList.add('dark-theme');
   themeSelect.value = 'dark';
   
+  const filterSelect = document.getElementById('typeFilter');
+filterSelect.addEventListener('change', function () {
+  const selected = this.value.toLowerCase();
+  document.querySelectorAll('.pokemon-card').forEach(card => {
+    const types = card.querySelector('p:nth-child(6)').textContent.toLowerCase();
+    card.style.display = types.includes(selected) || selected === '' ? 'block' : 'none';
+  });
+});
+
+//CHATGPT
+document.getElementById('xpSort').addEventListener('change', function () {
+  const sortOrder = this.value;
+  const container = document.getElementById('characterList');
+  const cards = Array.from(container.querySelectorAll('.pokemon-card'))
+    .filter(card => card.style.display !== 'none');
+
+  cards.sort((a, b) => {
+    const xpA = parseInt(a.querySelector('p:nth-child(1)').textContent.replace('Base XP: ', ''));
+    const xpB = parseInt(b.querySelector('p:nth-child(1)').textContent.replace('Base XP: ', ''));
+    return sortOrder === 'lowToHigh' ? xpA - xpB : xpB - xpA;
+  });
+
+  cards.forEach(card => container.appendChild(card));
+});
