@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="src/style.css">
 
   </head>
-  
+  <body>
+    
+ 
   <div id="app">
     <h1>Pokemon API</h1>
 
@@ -24,6 +26,8 @@
         </select>
       </div>
     </div>
+    
+    <button id="homeBtn">Home</button>
 
     <select id="typeFilter">
       <option value="">Alle types</option>
@@ -37,7 +41,11 @@
       <option value="lowToHigh">XP klein naar groot</option>
       <option value="highToLow">XP groot naar klein</option>
     </select>
-    
+
+  
+    <button id="MaakFavoriet">Toon Favorieten</button>
+<div id="favorietLijst" style="display: none;"></div>
+ 
     <div id="characterList"></div>
   </div>
   <script type="module" src="/src/main.js"></script>

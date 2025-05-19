@@ -1,28 +1,3 @@
-// import './style.css'
-// import javascriptLogo from './javascript.svg'
-// import viteLogo from '/vite.svg'
-// import { setupCounter } from './counter.js'
-
-// document.querySelector('#app').innerHTML = `
-//   <div>
-//     <a href="https://vite.dev" target="_blank">
-//       <img src="${viteLogo}" class="logo" alt="Vite logo" />
-//     </a>
-//     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-//       <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-//     </a>
-//     <h1>Hello Vite!</h1>
-//     <div class="card">
-//       <button id="counter" type="button"></button>
-//     </div>
-//     <p class="read-the-docs">
-//       Click on the Vite logo to learn more
-//     </p>
-//   </div>
-// `
-
-// setupCounter(document.querySelector('#counter'))
-
 
 fetch('https://pokeapi.co/api/v2/pokemon?limit=20')
   .then(response => response.json())
@@ -69,6 +44,37 @@ fetch('https://pokeapi.co/api/v2/pokemon?limit=20')
           card.appendChild(weight);
           card.appendChild(height);
           card.appendChild(types);
+
+const favorietButton = document.createElement('button');
+favorietButton.textContent = '🤍';
+favorietButton.classList.add('favorietButton');
+
+// Gemaakt met leerkracht
+let favoriets = JSON.parse(localStorage.getItem('favoriets')) || [];
+if (favoriets.includes(details.name)){
+  favorietButton.textContent = '❤️'; 
+}
+
+favorietButton.addEventListener('click', () => {
+  let favoriets = JSON.parse(localStorage.getItem('favoriets')) || [];
+
+  if (favoriets.includes(details.name)){
+    favoriets = favoriets.filter(name => name !== details.name);
+    favorietButton.textContent = '🤍';
+  }
+  else{
+    favoriets.push(details.name);
+    favorietButton.textContent = '❤️';
+
+  }
+
+// Uitleg gevraagd
+  localStorage.setItem('favoriets', JSON.stringify(favoriets));
+  toonFavorieten();
+})
+card.appendChild(favorietButton)
+
+
 
           characterList.appendChild(card);
         })
@@ -139,4 +145,77 @@ document.getElementById('xpSort').addEventListener('change', function () {
   });
 
   cards.forEach(card => container.appendChild(card));
+});
+
+
+document.getElementById('MaakFavoriet').addEventListener('click', () => {
+  const lijst = document.getElementById('favorietLijst');
+  const characterList = document.getElementById('characterList');
+
+  if (lijst.style.display === 'none' || lijst.style.display === '') {
+    lijst.style.display = 'block';
+    characterList.style.display = 'none';
+    toonFavorieten();
+  } else {
+    lijst.style.display = 'none';
+    characterList.style.display = 'block';
+  }
+});
+function toonFavorieten() {
+  const lijst = document.getElementById('favorietLijst');
+  const favoriets = JSON.parse(localStorage.getItem('favoriets')) || [];
+
+  lijst.innerHTML = ''; 
+
+  if (favoriets.length === 0) {
+    lijst.innerHTML = '<p>Geen favorieten geselecteerd.</p>';
+    return;
+  }
+
+  favoriets.forEach(name => {
+    fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
+      .then(res => res.json())
+      .then(details => {
+        const card = document.createElement('div');
+        card.classList.add('pokemon-card');
+
+        const experience = document.createElement('p');
+        experience.textContent = `Base XP: ${details.base_experience}`;
+
+        const nameEl = document.createElement('h3');
+        nameEl.textContent = details.name;
+
+        const image = document.createElement('img');
+        image.src = details.sprites.front_default;
+        image.alt = details.name;
+
+        const weight = document.createElement('p');
+        weight.textContent = `Gewicht: ${details.weight}`;
+
+        const height = document.createElement('p');
+        height.textContent = `Hoogte: ${details.height}`;
+
+        const types = document.createElement('p');
+        types.textContent = `Type(s): ${details.types.map(t => t.type.name).join(', ')}`;
+
+        card.appendChild(experience);
+        card.appendChild(nameEl);
+        card.appendChild(image);
+        card.appendChild(weight);
+        card.appendChild(height);
+        card.appendChild(types);
+
+        lijst.appendChild(card);
+      })
+      .catch(err => {
+        console.error(`Fout bij ophalen van ${name}:`, err);
+      });
+  });
+}
+
+const homeBtn = document.getElementById('homeBtn');
+
+homeBtn.addEventListener('click', () => {
+  document.getElementById('characterList').style.display = 'block';
+  document.getElementById('favorietLijst').style.display = 'none';
 });

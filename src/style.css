@@ -177,6 +177,15 @@ button:focus-visible {
   color: white;
 }
 
+#favorietLijst {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+ 
+  width: 100%;
+}
 
 #search::placeholder {
   color: #aaa;
