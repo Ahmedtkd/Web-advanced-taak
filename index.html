@@ -1,53 +1,56 @@
- <!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokemon</title>
-    <link rel="stylesheet" href="src/style.css">
-
+    <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    
- 
-  <div id="app">
-    <h1>Pokemon API</h1>
+    <div id="app">
+      <h1>Pokemon API</h1>
 
-    <div class="top-bar">
-      <div id="zoekbalk-container">
-      <input type="text" id="search" placeholder="Zoek een Pokémon op naam..." />
+      <div class="top-bar">
+        <div id="zoekbalk-container">
+          <input
+            type="text"
+            id="search"
+            placeholder="Zoek een Pokémon op naam..."
+          />
+        </div>
+        <div class="theme-selector">
+          <label for="themeSelectie"></label>
+          <select id="themeSelectie">
+            <option value="dark">Donker achtergrond</option>
+            <option value="light">Licht achtergrond</option>
+          </select>
+        </div>
       </div>
-      <div class="theme-selector">
-        <label for="themeSelectie"></label>
-        <select id="themeSelectie">
-          <option value="dark">Donker achtergrond</option>
-          <option value="light">Licht achtergrond</option>
-        </select>
+
+      <button id="homeBtn">Home</button>
+
+      <select id="typeFilter">
+        <option value="">Alle types</option>
+        <option value="fire">Fire</option>
+        <option value="water">Water</option>
+        <option value="grass">Grass</option>
+      </select>
+
+      <select id="xpSort">
+        <option value="">Sorteer op XP</option>
+        <option value="lowToHigh">XP klein naar groot</option>
+        <option value="highToLow">XP groot naar klein</option>
+      </select>
+<div id="fav-cont">
+      <button id="MaakFavoriet">Toon Favorieten</button>
+      <div id="favorietLijst" style="display: none"></div>
+</div>
+      <div id="characterList">
+
+        
       </div>
     </div>
-    
-    <button id="homeBtn">Home</button>
-
-    <select id="typeFilter">
-      <option value="">Alle types</option>
-      <option value="fire">Fire</option>
-      <option value="water">Water</option>
-      <option value="grass">Grass</option>
-    </select>
-
-    <select id="xpSort">
-      <option value="">Sorteer op XP</option>
-      <option value="lowToHigh">XP klein naar groot</option>
-      <option value="highToLow">XP groot naar klein</option>
-    </select>
-
-  
-    <button id="MaakFavoriet">Toon Favorieten</button>
-<div id="favorietLijst" style="display: none;"></div>
- 
-    <div id="characterList"></div>
-  </div>
-  <script type="module" src="/src/main.js"></script>
-</body>
-</html> 
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
