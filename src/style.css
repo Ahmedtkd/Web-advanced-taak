@@ -270,6 +270,9 @@ button:focus-visible {
   outline: none;
 }
 
+
+
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -280,5 +283,103 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+
+/* Mobile aanpassingen */
+@media (max-width: 768px) {
+  #app {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .nav-left, .nav-center, .nav-right {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .nav-center {
+    order: 1; /* Zet zoekbalk bovenaan */
+  }
+
+  .nav-left {
+    order: 2;
+  }
+
+  .nav-right {
+    order: 3;
+  }
+
+  #search {
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+  }
+
+  .nav-button {
+    flex: 1;
+    min-width: 120px;
+    min-height: 44px;
+  }
+
+  .nav-select, .theme-toggle {
+    flex: 1;
+    min-width: 130px;
+    font-size: 0.9rem;
+  }
+
+  .pokemon-card {
+    width: calc(50% - 0.5rem);
+    max-width: none;
+  }
+
+  #characterList, #favorietLijst {
+    gap: 0.5rem;
+  }
+}
+
+/* Zeer kleine schermen */
+@media (max-width: 480px) {
+  #app {
+    padding: 0.5rem;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .pokemon-card {
+    width: 100%;
+  }
+
+  .nav-button {
+    font-size: 0.9rem;
+    padding: 0.7rem 1rem;
+  }
+
+  .nav-select, .theme-toggle {
+    font-size: 0.8rem;
+  }
+}
+
+/* Grote schermen */
+@media (min-width: 1200px) {
+  .pokemon-card {
+    width: 220px;
+  }
+  
+  #characterList, #favorietLijst {
+    gap: 1.5rem;
   }
 }
