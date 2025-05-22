@@ -2,10 +2,10 @@
 Welkom! Dit is mijn interactieve Single Page Web App over Pokémon.
 Een interactieve Single Page Web Applicatie gebouwd met Vite, Vanilla JavaScript en de PokéAPI. De app laat je Pokémon zoeken, filteren op type, sorteren op XP en favorieten beheren via LocalStorage. Met ondersteuning voor licht en donker thema en volledig responsive design.
 
-# 📌 Projectbeschrijving
+#  Projectbeschrijving
 Deze applicatie haalt data op van de officiële https://pokeapi.co/ en toont een interactieve lijst van Pokémon. Je kunt zoeken op naam, filteren op type (fire, water, grass), sorteren op XP, favorieten markeren en wisselen tussen licht/donker thema. Het project is gemaakt als eindopdracht voor het vak Web Advanced.
 			
-## 🛠️ Functionaliteiten
+## 🛠 Functionaliteiten
 
 | Functionaliteit           | Beschrijving                                             | Bestand                        | Lijnnummers     |
 |---------------------------|--------------------------------------------------------|------------------                |------------------|
@@ -30,7 +30,7 @@ Sort op xp: C:\Users\ahmed\webadvancedtaak\src\pictures\SorteerXP.png
 
 
 
-## 🔗 Gebruikte bronnen
+##  Gebruikte bronnen
 Pokemon API - https://pokeapi.co/ - voor het ophalen van personagedata en de logo
 Vite - https://vite.dev/ - voor het opstellen van dit project
 W3schools - https://www.w3schools.com/js/default.asp - voor referentie over JS, Fetch API, en CSS
@@ -43,16 +43,14 @@ Pokemon - logo : https://1000logos.net/wp-content/uploads/2017/05/Pokemon-Logo.p
 Principe van fetch() : https://www.youtube.com/watch?v=37vxWr0WgQk 
 
 ## Installatiehandleiding
-Installatie
-Clone deze repository:
-- git clone https://github.com/Ahmedtkd/Web-advanced-taak
 
-- npm install
-  
-- npm run dev
+  -Clone eerst de repository via het volgende commando: git clone https://github.com/Ahmedtkd/Web-advanced-taak.
+  - Navigeer daarna naar de map met 'cd Web-advanced-taak'.
+  - Installeer de nodige dependencies door 'npm install' uit te voeren.
+  - Start vervolgens de ontwikkelserver via 'npm run dev'.
+  - Zodra de server actief is, kun je de applicatie openen in je browser op http://localhost:5173.
 
 ## Technologieën
-
 - HTML5 & CSS3 (Flexbox en Grid)
 - JavaScript (ES6 Modules)
 - Fetch API voor data ophalen
