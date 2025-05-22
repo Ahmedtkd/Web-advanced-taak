@@ -270,8 +270,50 @@ button:focus-visible {
   outline: none;
 }
 
+.light-theme #search {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
 
+.light-theme #search::placeholder {
+  color: #555;
+}
 
+.light-theme .nav-select, 
+.light-theme .theme-toggle, .light-theme select {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #333;
+}
+
+.light-theme .nav-select option, 
+.light-theme .theme-toggle option, .light-theme select option {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.light-theme .nav-button {
+  background: rgba(100, 108, 255, 0.1);
+  border: 1px solid rgba(100, 108, 255, 0.3);
+  color: #000000;
+}
+
+.light-theme .nav-button:hover {
+  background: rgba(100, 108, 255, 0.2);
+  border-color: #646cff;
+}
+
+.light-theme .navbar {
+  background: linear-gradient(135deg, rgba(100, 108, 255, 0.05), rgba(83, 91, 242, 0.05));
+  border: 1px solid rgba(100, 108, 255, 0.2);
+}
+
+.light-theme .search-container {
+  background-color: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
 
 @media (prefers-color-scheme: light) {
   :root {
