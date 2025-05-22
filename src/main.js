@@ -151,7 +151,7 @@ document.getElementById('MaakFavoriet').addEventListener('click', () => {
   const characterList = document.getElementById('characterList');
 
   if (lijst.style.display === 'none' || lijst.style.display === '') {
-    lijst.style.display = 'flex'; // Belangrijk: verander naar flex in plaats van block
+    lijst.style.display = 'flex'; 
     lijst.style.flexWrap = 'wrap';
     lijst.style.justifyContent = 'center';
     lijst.style.gap = '1rem';
@@ -159,7 +159,7 @@ document.getElementById('MaakFavoriet').addEventListener('click', () => {
     toonFavorieten();
   } else {
     lijst.style.display = 'none';
-    characterList.style.display = 'flex'; // Belangrijk: verander naar flex in plaats van block
+    characterList.style.display = 'flex'; 
     characterList.style.flexWrap = 'wrap';
     characterList.style.justifyContent = 'center';
     characterList.style.gap = '1rem';
