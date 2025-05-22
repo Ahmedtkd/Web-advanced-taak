@@ -21,12 +21,12 @@ Deze applicatie haalt data op van de officiële https://pokeapi.co/ en toont een
 
 
 ## Screenshots van de applicatie
-Startpagina met donkere thema: C:\Users\ahmed\webadvancedtaak\src\pictures\HomePagina1.png, C:\Users\ahmed\webadvancedtaak\src\pictures\HomePagina2.png, C:\Users\ahmed\webadvancedtaak\src\pictures\HomePagina3.png
-Mobiele view: C:\Users\ahmed\webadvancedtaak\src\pictures\Mobieleversie1.png, C:\Users\ahmed\webadvancedtaak\src\pictures\Mobieleversie2.png, C:\Users\ahmed\webadvancedtaak\src\pictures\Mobieleversie3.png
-Favorietenweergave: C:\Users\ahmed\webadvancedtaak\src\pictures\Favoriet.png
-Sort in type: C:\Users\ahmed\webadvancedtaak\src\pictures\SortType.png
-Zoekfunctie met pokemon naam: C:\Users\ahmed\webadvancedtaak\src\pictures\Zoekfunctie.png
-Sort op xp: C:\Users\ahmed\webadvancedtaak\src\pictures\SorteerXP.png
+Startpagina met donkere thema: webadvancedtaak\src\pictures\HomePagina1.png, webadvancedtaak\src\pictures\HomePagina2.png, webadvancedtaak\src\pictures\HomePagina3.png
+Mobiele view: webadvancedtaak\src\pictures\Mobieleversie1.png, webadvancedtaak\src\pictures\Mobieleversie2.png, webadvancedtaak\src\pictures\Mobieleversie3.png
+Favorietenweergave: webadvancedtaak\src\pictures\Favoriet.png
+Sort in type: webadvancedtaak\src\pictures\SortType.png
+Zoekfunctie met pokemon naam: webadvancedtaak\src\pictures\Zoekfunctie.png
+Sort op xp: webadvancedtaak\src\pictures\SorteerXP.png
 
 
 
